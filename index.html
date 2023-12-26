@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- PreLoader Code is Start -->
+    <div id="loader" class="bg-[black] h-screen w-full fixed z-[100]">
+        <div class="grid place-content-center h-screen">
+            <div class="loader">
+                <img class="animate-pulse transition duration-100 ease-in-out w-32" src="phpstorm-logo-220B633CDA-seeklogo.com.png" alt="icon">
+            </div>
+        </div>
+    </div>
+    <!-- PreLoader Code is End -->
+
+
+    
+    <!-- Header Code Start-->
+
+    <header class="bg-black text-white p-1 border-white">
+        <div class="flex justify-between items-center">
+            <div class="flex justify-center items-center gap-2 ml-2">
+                <div>
+                    <img class="w-10 h-10" src="phpstorm-logo-220B633CDA-seeklogo.com.png" alt="icon">
+                </div>
+                <div>
+                    <h1 class="text-2xl font-mono font-bold">CODIFY</h1>
+                    <h3 class="text-base font-mono font-bold text-gray-600">"Code Crafted, Dreams Compiled: Your Web
+                        Odyssey Begins Here!"</h3>
+                </div>
+
+            </div>
+            <div class="flex justify-center items-center gap-2 mr-2">
+                <div>
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md"
+                        onclick="resetCode()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Code End-->
+
+
+
+
+    <!-- Main Code Start-->
+    <div class="grid grid-cols-4">
+        <div class="bg-black pt-2 pb-6 border-t border-gray-600">
+
+            <!-- HTML Section Start -->
+            <div class="bg-black">
+                <div class="flex">
+                    <div class="flex flex-row bg-slate-800 p-1 border-t-2 gap-2">
+                        <div>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32"
+                                viewBox="0 0 32 32" id="html">
+                                <path fill="#FFE6E2"
+                                    d="M26,32H6c-3.314,0-6-2.686-6-6V6c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v20C32,29.314,29.314,32,26,32z">
+                                </path>
+                                <path fill="#FFE6E2"
+                                    d="M26,32H6c-3.314,0-6-2.686-6-6V6c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v20C32,29.314,29.314,32,26,32z">
+                                </path>
+                                <path fill="#FC573B"
+                                    d="M21.592,22.136L22.834,8H9.167H9.166l1.242,14.136L15.982,24L21.592,22.136z M12.468,19.632l-0.213-2.707h1.698l0.125,1.361l1.904,0.518l1.911-0.518l0.213-2.222h-5.94l-0.456-5.2h8.581l-0.156,1.704h-6.541l0.146,1.765h6.249l-0.484,5.3l-3.484,0.965v0.011h-0.039L12.468,19.632z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <label class="text-gray-300 text-xl font-mono font-bold" for="html">HTML</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="html">
+                    <textarea title="html" class="w-[96%] border-none outline-none pl-3 bg-slate-800 text-white text-sm" name="html"
+                    id="html-code" cols="30" rows="8" onkeyup="runCode()"></textarea>
+                </div>
+            </div>
+            <!-- HTML Section End -->
+
+
+            <!-- CSS Section Start -->
+            <div class="bg-black">
+                <div class="flex">
+                    <div class="flex flex-row bg-slate-800 p-1 border-t-2 gap-2">
+                        <div>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32"
+                                viewBox="0 0 32 32" id="css">
+                                <path fill="#E2F6FF"
+                                    d="M26,32H6c-3.314,0-6-2.686-6-6V6c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v20C32,29.314,29.314,32,26,32z">
+                                </path>
+                                <polygon fill="#2196F3"
+                                    points="8.653 17.647 8 20.822 14.423 23.5 21.867 20.822 24 8.501 24 8.5 10.42 8.5 9.876 11.246 20.99 11.246 20.64 13.01 9.517 13.01 8.983 15.755 20.097 15.755 19.47 19.007 15 20.493 11.12 19.007 11.387 17.647">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <div>
+                            <label class="text-gray-300 text-xl font-mono font-bold" for="css" for="css">CSS</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="css">
+                    <textarea title="css" class="w-[96%] border-none outline-none pl-3 bg-slate-800 text-white text-sm" name="css"
+                        id="css-code" cols="30" rows="8" onkeyup="runCode()"></textarea>
+                </div>
+            </div>
+            <!-- CSS Section End -->
+
+
+            <!-- Javascript Section Start -->
+            <div class="bg-black">
+                <div class="flex">
+                    <div class="flex flex-row bg-slate-800 p-1 border-t-2 gap-2">
+                        <div>
+                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32"
+                                viewBox="0 0 32 32" id="javascript">
+                                <path fill="#FBE428"
+                                    d="M26,32H6c-3.314,0-6-2.686-6-6V6c0-3.314,2.686-6,6-6h20c3.314,0,6,2.686,6,6v20C32,29.314,29.314,32,26,32z">
+                                </path>
+                                <path fill="#000"
+                                    d="M8,24H24V8H8V24z M21.19,20.419c-0.17-0.641-1.501-0.79-2.411-1.47c-0.92-0.62-1.139-2.12-0.379-2.981c0.26-0.32,0.689-0.56,1.14-0.67l0.47-0.059c0.91-0.021,1.469,0.219,1.889,0.689c0.121,0.119,0.211,0.24,0.391,0.52c-0.481,0.299-0.481,0.299-1.17,0.75c-0.151-0.32-0.391-0.52-0.651-0.6c-0.4-0.12-0.91,0.009-1.01,0.44c-0.039,0.13-0.03,0.25,0.031,0.47c0.162,0.37,0.707,0.53,1.198,0.76c1.41,0.572,1.885,1.185,2.002,1.915l-0.031-0.045c0.111,0.63-0.03,1.04-0.049,1.1c-0.521,1.78-3.421,1.84-4.581,0.669c-0.24-0.28-0.4-0.419-0.54-0.739l1.22-0.701c0.33,0.5,0.629,0.771,1.17,0.891C20.61,21.449,21.35,21.199,21.19,20.419z M13.422,20.651c0.011,0,0.043,0.061,0.085,0.131c0.155,0.259,0.289,0.439,0.553,0.57c0.257,0.081,0.824,0.139,1.044-0.32c0.134-0.232,0.092-0.986,0.092-1.807c0-1.294,0.006-2.578,0.006-3.87h1.499l-0.003,0.037c0,1.38,0.008,2.75,0,4.119c0.003,0.851,0.075,1.611-0.265,2.231c-0.235,0.48-0.685,0.79-1.207,0.941c-0.802,0.18-1.568,0.07-2.138-0.27c-0.383-0.23-0.679-0.591-0.883-1.011L13.422,20.651z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <label class="text-gray-300 text-xl font-mono font-bold" for="js">JS</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="js">
+                    <textarea title="js" class="w-[96%] border-none outline-none pl-3 bg-slate-800 text-white text-sm" name="js"
+                        id="js-code" cols="30" rows="8" onkeyup="runCode()"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Javascript Section End -->
+
+
+        <!-- Ouput Code -->
+        <div class="col-start-2 col-end-5">
+            <div class="flex h-full">
+                <iframe class="w-full" title="output" frameborder="0" id="output"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Ouput Code End -->
+
+
+    <!-- Main Code End-->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
